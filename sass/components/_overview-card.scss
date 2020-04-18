@@ -1,0 +1,44 @@
+.overview{
+  &__card{
+
+    background-color: var(--color-bg-card);
+    border-radius: .5rem;
+    padding: 2.5rem 3rem 2rem 2.5rem;
+    display: grid;
+    grid-gap: 2.5rem;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform .2s ease;
+
+    // &__heading-1{
+    //
+    // }
+    // &__heading-2{
+    //
+    // }
+    &__icon-block{
+      justify-self: end;
+    }
+    &__stat-block{
+      align-self: end;
+      display: flex;
+      align-items: center;
+      &> :not(:last-child){
+        margin-right: .5rem;
+      }
+    }
+    &__icon{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &:active,
+    &:hover{
+      cursor: pointer;
+      background-color:  var(--color-bg-card-active);
+      transform: translateY(-3px);
+    }
+  }
+}

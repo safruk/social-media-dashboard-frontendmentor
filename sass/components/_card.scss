@@ -1,0 +1,123 @@
+.card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-bg-card);
+  border-top: solid .4rem transparent;
+  border-radius: 0.4rem;
+  // displays content between padding box and border box.
+  //Try adding background-clip:content-box, border-box to get a clearer idea .displays between content and border
+ // 100%- width of bg img  .4rem-height of bg img
+  //just a hack to prevent overflow of the bordercolors as a tiny portion of colors
+  // are displayed at the border edges
+  //background-image: ;
+  background-clip: border-box; // clip the border to apply background-image
+  background-size: 100% .4rem; //x- 100%(width); y- border-radius(height); for border-top
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  transition: transform .2s ease;
+  @include respond(small-desktop){
+    padding: 1rem 0;
+  };
+  &--fb {
+    background-image: linear-gradient(var(--color-fb), var(--color-fb));
+  }
+
+  &--twt {
+    background-image: linear-gradient(var(--color-twt), var(--color-twt));
+  }
+
+  &--ins {
+    background-image: var(--color-ins);
+  }
+
+  &--yt {
+    background-image: linear-gradient(var(--color-yt), var(--color-yt));
+  }
+
+  & > :not(:last-child) {
+    margin-bottom: 2.25rem;
+  }
+
+  &__name-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__social-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // height: 2.5rem;
+    // width: 2.5rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    color: var(--color-text-sub);
+  }
+  &__followers-block{
+    &> :not(:last-child){
+      margin-bottom: .5rem;
+    }
+  }
+  &__no-of-followers {
+
+  }
+
+  &__followers {
+    color: var(--color-text-sub);
+  }
+
+  &__today-stat {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    & > :not(:last-child) {
+      margin-right: 0.7rem;
+    }
+  }
+
+  &__today-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // height: 1rem;
+    // width: 1rem;
+    img {
+      // max-height: 2.5rem;
+      // max-width: 100%;
+    }
+  }
+
+  &__today {
+
+    &--up {
+      color: var(--color-general-text-1);
+    }
+
+    &--down {
+      color: var(--color-general-text-2);
+    }
+  }
+
+  &:active,
+  &:hover{
+    cursor: pointer;
+    background-color:  var(--color-bg-card-active);
+    transform: translateY(-3px);
+  }
+}

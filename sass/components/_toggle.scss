@@ -1,0 +1,54 @@
+.toggle{
+  // font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--color-text-sub);
+
+  & >:last-child{
+    margin-left: auto;
+  }
+
+  @include respond(tab-port){
+    & >:last-child{
+      margin-left: 1rem;
+    }
+  };
+
+  input{
+    display: none;
+
+    // opacity: 0;
+    // width: 0;
+    // height: 0;
+  }
+  &__slider{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 10rem;
+    background: var(--color-toggle);
+
+    &::after{
+      content:"";
+      display: flex;
+      align-items: center;
+      height: 1.75rem;
+      max-width: 1.75rem;
+      width: 100%;
+      border-radius: 50%;
+      background-color: var(--color-bg-top);
+      margin:0 .35rem;
+      transition: transform .5s ease-in-out;
+    }
+  }
+
+  .toggle-input:checked ~ .toggle__slider::after{
+    // margin-left:auto; //sadly this cant be animated because 'auto' cant be animated
+    transform: translateX(2.5rem);
+  }
+}

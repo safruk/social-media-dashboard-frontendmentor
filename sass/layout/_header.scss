@@ -1,0 +1,39 @@
+.header {
+  padding: 3.5rem 0 2.25rem;
+  z-index: 1;
+  grid-row: 1 / 2;
+  grid-column: center-start / center-end;
+  // background-color: orangered; //test
+  align-items: baseline;
+
+  & > :not(:last-child) {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-bg-card);
+  }
+  @include respond(tab-port) {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > :not(:last-child) {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  };
+
+  &__heading-text {
+    margin-right: auto;
+  }
+
+  &__heading-sub {
+    color: var(--color-text-sub);
+  }
+
+  &__toggle-block {
+    @include respond(tab-port) {
+      display: flex;
+      align-items: center;
+    };
+  }
+}

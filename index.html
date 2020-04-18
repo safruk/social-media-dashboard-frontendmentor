@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | [Social-media-dashboard-with-theme-switcher]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style> -->
+</head>
+
+<body>
+  <div class="bg-top-div"></div>
+  <header class="header">
+    <div class="header__heading-text">
+      <h1 class="header__heading-main heading">Social Media Dashboard</h1>
+      <h4 class="header__heading-sub heading">Total Followers: 23,004</h4>
+    </div>
+    <div class="header__toggle-block">
+      <!-- <h5 class="heading-toggle">Dark Mode</h5> -->
+      <label for="dark-mode-toggle" class="toggle">
+        <span>Dark Mode</span>
+        <input type="checkbox" class="toggle-input" name="toggle" value="dark-mode" id="dark-mode-toggle" />
+        <span class="toggle__slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <div class="card-section">
+    <div class="card card--fb">
+      <div class="card__name-block">
+        <span class="card__social-icon">
+          <img src="./images/icon-facebook.svg" alt="twitter-icon">
+        </span>
+        <p class="card__name">@nathanf</p>
+      </div>
+      <div class="card__followers-block">
+        <h2 class="card__no-of-followers"> 1987</h2>
+        <p class="card__followers">Followers</p>
+      </div>
+      <div class="card__today-stat">
+        <span class="card__today-icon">
+          <img src="./images/icon-up.svg" alt="icon-up">
+        </span>
+        <p class="card__today card__today--up">12 Today</p>
+      </div>
+    </div>
+
+    <div class="card card--twt">
+      <div class="card__name-block">
+        <span class="card__social-icon">
+          <img src="./images/icon-twitter.svg" alt="twitter-icon">
+        </span>
+        <p class="card__name">@nathanf</p>
+      </div>
+      <div class="card__followers-block">
+        <h2 class="card__no-of-followers"> 1044</h2>
+        <p class="card__followers">Followers</p>
+      </div>
+      <div class="card__today-stat">
+        <span class="card__today-icon">
+          <img src="./images/icon-up.svg" alt="icon-up">
+        </span>
+        <p class="card__today card__today--up">99 Today</p>
+      </div>
+    </div>
+
+    <div class="card card--ins">
+      <div class="card__name-block">
+        <span class="card__social-icon">
+          <img src="./images/icon-instagram.svg" alt="twitter-icon">
+        </span>
+        <p class="card__name">@realnathanf</p>
+      </div>
+      <div class="card__followers-block">
+        <h2 class="card__no-of-followers"> 11k</h2>
+        <p class="card__followers">Followers</p>
+      </div>
+      <div class="card__today-stat">
+        <span class="card__today-icon">
+          <img src="./images/icon-up.svg" alt="icon-up">
+        </span>
+        <p class="card__today card__today--up">1099 Today</p>
+      </div>
+    </div>
+
+    <div class="card card--yt">
+      <div class="card__name-block">
+        <span class="card__social-icon">
+          <img src="./images/icon-youtube.svg" alt="twitter-icon">
+        </span>
+        <p class="card__name">Nathan F</p>
+      </div>
+      <div class="card__followers-block">
+        <h2 class="card__no-of-followers"> 8239</h2>
+        <p class="card__followers">Subscribers</p>
+      </div>
+      <div class="card__today-stat">
+        <span class="card__today-icon">
+          <img src="./images/icon-down.svg" alt="icon-up">
+        </span>
+        <p class="card__today card__today--down">144 Today</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="overview">
+    <h2 class="overview__heading heading"> Overview - Today</h2>
+    <div class="overview__cards">
+      <div class="overview__card">
+        <h4 class="overview__card__heading-1 heading">Page Views</h4>
+        <span class="overview__card__icon-block">
+          <img src="./images/icon-facebook.svg" alt="fb-icon" class="overview__card__icon">
+        </span>
+        <h2 class="overview__card__heading-2 heading">87</h2>
+        <div class="overview__card__stat-block">
+          <span class="overview__card__icon">
+            <img src="./images/icon-up.svg" alt="icon-up">
+          </span>
+          <p class="card__today card__today--up">3%</p>
+        </div>
+      </div>
+
+      <div class="overview__card">
+        <h4 class="overview__card__heading-1 heading">Likes</h4>
+        <span class="overview__card__icon-block">
+          <img src="./images/icon-facebook.svg" alt="fb-icon" class="overview__card__icon">
+        </span>
+        <h2 class="overview__card__heading-2 heading">52</h2>
+        <div class="overview__card__stat-block">
+          <span class="overview__card__icon">
+            <img src="./images/icon-down.svg" alt="icon-down">
+          </span>
+          <p class="card__today card__today--down">2%</p>
+        </div>
+      </div>
+
+      <div class="overview__card">
+        <h4 class="overview__card__heading-1 heading">Likes</h4>
+        <span class="overview__card__icon-block">
+          <img src="./images/icon-instagram.svg" alt="ins-icon" class="overview__card__icon">
+        </span>
+        <h2 class="overview__card__heading-2 heading">5462</h2>
+        <div class="overview__card__stat-block">
+          <span class="overview__card__icon">
+            <img src="./images/icon-up.svg" alt="icon-up">
+          </span>
+          <p class="card__today card__today--up">2257%</p>
+        </div>
+      </div>
+
+      <div class="overview__card">
+        <h4 class="overview__card__heading-1 heading">Profile Views</h4>
+        <span class="overview__card__icon-block">
+          <img src="./images/icon-Instagram.svg" alt="ins-icon" class="overview__card__icon">
+        </span>
+        <h2 class="overview__card__heading-2 heading">52k</h2>
+        <div class="overview__card__stat-block">
+          <span class="overview__card__icon">
+            <img src="./images/icon-up.svg" alt="icon-up">
+          </span>
+          <p class="card__today card__today--up">1375%</p>
+        </div>
+      </div>
+
+      <div class="overview__card">
+        <h4 class="overview__card__heading-1 heading">Retweets</h4>
+        <span class="overview__card__icon-block">
+          <img src="./images/icon-twitter.svg" alt="twt-icon" class="overview__card__icon">
+        </span>
+        <h2 class="overview__card__heading-2 heading">117</h2>
+        <div class="overview__card__stat-block">
+          <span class="overview__card__icon">
+            <img src="./images/icon-up.svg" alt="icon-up">
+          </span>
+          <p class="card__today card__today--up">303%</p>
+        </div>
+      </div>
+
+      <div class="overview__card">
+        <h4 class="overview__card__heading-1 heading">Likes</h4>
+        <span class="overview__card__icon-block">
+          <img src="./images/icon-twitter.svg" alt="twt-icon" class="overview__card__icon">
+        </span>
+        <h2 class="overview__card__heading-2 heading">507</h2>
+        <div class="overview__card__stat-block">
+          <span class="overview__card__icon">
+            <img src="./images/icon-up.svg" alt="icon-up">
+          </span>
+          <p class="card__today card__today--up">553%</p>
+        </div>
+      </div>
+
+      <div class="overview__card">
+        <h4 class="overview__card__heading-1 heading">Likes</h4>
+        <span class="overview__card__icon-block">
+          <img src="./images/icon-youtube.svg" alt="yt-icon" class="overview__card__icon">
+        </span>
+        <h2 class="overview__card__heading-2 heading">107</h2>
+        <div class="overview__card__stat-block">
+          <span class="overview__card__icon">
+            <img src="./images/icon-down.svg" alt="icon-down">
+          </span>
+          <p class="card__today card__today--down">19%</p>
+        </div>
+      </div>
+
+      <div class="overview__card">
+        <h4 class="overview__card__heading-1 heading">Total Views</h4>
+        <span class="overview__card__icon-block">
+          <img src="./images/icon-youtube.svg" alt="yt-icon" class="overview__card__icon">
+        </span>
+        <h2 class="overview__card__heading-2 heading">1407</h2>
+        <div class="overview__card__stat-block">
+          <span class="overview__card__icon">
+            <img src="./images/icon-down.svg" alt="icon-down">
+          </span>
+          <p class="card__today card__today--down">12%</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <p class="attribution">
+    Challenge by <a class="attribution" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a class="attribution" href="https://safruk.github.io/Safas-website">Safa Ruknuddin &rarr;</a>.
+  </p>
+
+  <script type="text/javascript" src="./index.js">
+
+  </script>
+</body>
+
+</html>
