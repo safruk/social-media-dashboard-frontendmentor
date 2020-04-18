@@ -33,7 +33,7 @@ body{
 
   min-height: 100vh;
   display: grid;
-
+  transition: background-color .25s, color .25s;
 //grid-template-rows: [dashboard-start]min-content[dashboard-end card-start] repeat(8, [row-start] max-content [row-end]) [card-end overview-start]min-content[overview-end attribution-start] min-content [attribution-end] ;
 
   grid-template-columns: [full-start]minmax(3rem, 1fr) [center-start]repeat(4, minmax(min-content,32rem))[center-end] minmax(3rem, 1fr)[full-end];

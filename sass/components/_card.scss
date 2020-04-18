@@ -18,7 +18,7 @@
   background-size: 100% .4rem; //x- 100%(width); y- border-radius(height); for border-top
   background-repeat: no-repeat;
   background-origin: border-box;
-  transition: transform .2s ease;
+  transition: transform .2s ease,background-color .25s ease, color .25s ease;
   @include respond(small-desktop){
     padding: 1rem 0;
   };

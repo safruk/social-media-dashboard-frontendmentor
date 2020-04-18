@@ -47,6 +47,7 @@ body {
   color: var(--color-text-main);
   min-height: 100vh;
   display: grid;
+  transition: background-color .25s, color .25s;
   grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(4, minmax(min-content, 32rem)) [center-end] minmax(3rem, 1fr) [full-end]; }
   @media only screen and (min-width: 37.5em) {
     body {
@@ -119,19 +120,20 @@ body {
     align-items: center;
     height: 2.5rem;
     width: 5rem;
+    border: none;
     border-radius: 10rem;
     background: var(--color-toggle); }
     .toggle__slider::after {
       content: "";
       display: flex;
-      align-items: center;
-      height: 1.75rem;
-      max-width: 1.75rem;
+      justify-content: center;
+      height: 1.8rem;
+      max-width: 1.8rem;
       width: 100%;
       border-radius: 50%;
       background-color: var(--color-bg-top);
-      margin: 0 .35rem;
-      transition: transform .5s ease-in-out; }
+      margin: .3rem;
+      transition: transform .35s ease-in-out; }
   .toggle .toggle-input:checked ~ .toggle__slider::after {
     transform: translateX(2.5rem); }
 
@@ -149,7 +151,7 @@ body {
   background-size: 100% .4rem;
   background-repeat: no-repeat;
   background-origin: border-box;
-  transition: transform .2s ease; }
+  transition: transform .2s ease,background-color .25s ease, color .25s ease; }
   @media only screen and (min-width: 85em) {
     .card {
       padding: 1rem 0; } }
@@ -210,7 +212,7 @@ body {
   grid-template-columns: max-content max-content;
   justify-content: space-between;
   align-items: center;
-  transition: transform .2s ease; }
+  transition: transform .2s ease, background-color .25s ease, color .25s ease; }
   .overview__card__icon-block {
     justify-self: end; }
   .overview__card__stat-block {
